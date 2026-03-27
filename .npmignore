@@ -1,0 +1,10 @@
+environment
+src
+test
+index.html
+.*
+dev.*
+eslint.config.js
+tsconfig.json
+package-lock.json
+vite.*

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnt App</title>
+    <link rel="stylesheet" href="/src/front.css">
+</head>
+
+<body>
+    <h1>Hello, Dnt!</h1>
+    <div id="app"></div>
+    <script type="module" src="/src/front.ts"></script>
+
+    <button data-dnt-control="#menu-offcanvas" aria-controls="menu-offcanvas">
+        Left Offcanvas</button>
+
+    <dialog id="contacts-offcanvas" class="modal modal_end" aria-label="Contacts">
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et lectus in magna efficitur
+                iaculis. Vivamus porta ipsum in pretium tempor. Maecenas placerat blandit elit, sed fringilla ante
+                aliquam vel. Donec eget placerat lorem. Duis fringilla vel justo ut finibus. Sed eleifend suscipit
+                tortor vitae porta. Proin nec molestie nisi. Donec in ipsum nec dolor faucibus tincidunt vel at leo.
+                Phasellus vel ligula blandit, fermentum neque non, semper neque. Vestibulum tincidunt vulputate nibh
+                a venenatis. Suspendisse velit nisi, mollis in pellentesque ut, rhoncus vel nisi.</p>
+            <p>Duis id lacinia metus. Duis efficitur neque at purus faucibus porta. Duis eu diam tristique, cursus
+                enim faucibus, elementum erat. Quisque ac suscipit quam. Aliquam sed erat eu dolor ornare
+                consectetur a eget leo. Nullam condimentum arcu sed quam rutrum, consequat finibus libero sodales.
+                Nulla ullamcorper feugiat libero, a convallis metus aliquam auctor. Suspendisse et elit commodo,
+                ornare ipsum eget, mattis ipsum. Sed et cursus orci. Pellentesque habitant morbi tristique senectus
+                et netus et malesuada fames ac turpis egestas. Donec faucibus scelerisque rutrum. Donec tincidunt
+                convallis felis, id euismod felis suscipit ut. Aenean non commodo erat. Class aptent taciti sociosqu
+                ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur facilisis dolor ac dolor
+                vehicula, et congue eros malesuada.</p>
+            <p>Morbi ac sodales augue, in laoreet metus. Morbi maximus consectetur diam eget tempor. Donec
+                pellentesque nisi suscipit, scelerisque orci at, imperdiet nisl. Pellentesque sed bibendum est. Sed
+                eget posuere arcu. Nullam et accumsan dolor. Donec auctor commodo molestie. Praesent ante erat,
+                rutrum eget diam vel, fermentum aliquam mi. Vestibulum ac dignissim elit. Interdum et malesuada
+                fames ac ante ipsum primis in faucibus. Mauris congue consectetur quam vel maximus. Quisque et orci
+                ante. Aliquam facilisis porta leo id malesuada.</p>
+            <p>Phasellus sit amet enim ex. Phasellus at enim gravida, mollis orci sed, aliquam leo. Cras et
+                condimentum arcu. In non lobortis turpis. Vivamus consectetur tincidunt orci, eu semper tortor
+                venenatis aliquam. Integer enim risus, suscipit at metus non, bibendum scelerisque nulla. In quis
+                eros eu magna elementum gravida. Donec congue scelerisque lectus et hendrerit. Vestibulum nec neque
+                ac est condimentum bibendum et sed ligula. Praesent sed neque euismod, accumsan ligula ac, auctor
+                ante.</p>
+            <p>Integer pellentesque tellus in faucibus lobortis. Quisque ut volutpat magna. Etiam id eros commodo,
+                vehicula dolor vel, tempus mi. Phasellus eu venenatis nisl. Donec laoreet sagittis ipsum, quis
+                sagittis nunc pellentesque eu. Cras elementum elit ac massa pulvinar aliquam. Donec luctus tincidunt
+                diam, sed ornare tortor consequat sit amet. Nam in imperdiet enim. Vivamus malesuada lobortis
+                aliquam. Etiam ac massa leo. Donec vitae libero nisl.</p>
+            <p>Etiam ornare sem ut tincidunt vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                vel libero at urna porttitor volutpat vitae in purus. Integer nec metus sed sapien luctus pharetra
+                nec sed nulla. Morbi pellentesque tincidunt massa, et laoreet diam ultricies quis. Nam non lacus
+                aliquam, posuere ante ac, auctor ipsum. Aenean ex purus, rutrum vel faucibus tempus, gravida vitae
+                sem. Vestibulum volutpat urna id vestibulum posuere. Vivamus fermentum lacus eget ultricies
+                vestibulum. Curabitur tempus turpis quis lacus vulputate efficitur. Nunc ac porttitor enim. Etiam
+                porta pharetra viverra. Suspendisse nunc odio, tincidunt vitae metus eget, luctus consectetur diam.
+                Proin vel laoreet leo, id dictum enim.</p>
+            <p>Nam suscipit odio quam, in dapibus tortor maximus non. Curabitur ut magna ligula. Sed sagittis risus
+                nunc, non lacinia eros bibendum ac. Nullam purus sapien, condimentum non nibh a, suscipit egestas
+                justo. Ut porttitor in nisl sit amet euismod. Duis interdum ligula ex, et ultrices quam viverra eu.
+                Phasellus ac massa est. Morbi augue neque, volutpat rutrum est vitae, scelerisque fermentum eros.
+                Curabitur sed sem ut tellus pellentesque bibendum nec at magna. In a faucibus eros. Phasellus semper
+                libero non nibh maximus, sed bibendum dolor suscipit. In tristique leo id neque efficitur egestas.
+                Aenean arcu elit, volutpat vitae dolor ac, sagittis fringilla mauris. Ut gravida purus ac
+                ullamcorper accumsan. Aliquam erat volutpat.</p>
+            <p>Quisque et massa eget purus porta pellentesque. Quisque luctus nisi sit amet elit egestas suscipit.
+                Donec augue nulla, pretium accumsan dapibus quis, elementum eu nisi. Integer consectetur consequat
+                ex. Donec orci est, mollis nec diam sed, viverra suscipit purus. Ut suscipit ornare ex placerat
+                lobortis. Aliquam vel volutpat ligula. Praesent sagittis placerat feugiat. Donec ut purus at libero
+                vulputate hendrerit sit amet vel nibh. Nullam finibus massa a tortor aliquet, a consequat libero
+                luctus. Proin rutrum lacus felis, eget tristique augue iaculis eu. Sed vitae elit et diam dignissim
+                bibendum. Phasellus erat orci, cursus quis lacus id, gravida venenatis turpis. Vestibulum ultricies
+                velit ac enim porta, eu eleifend elit tincidunt. Vestibulum quis auctor lorem. Aenean scelerisque
+                odio vel lorem congue pulvinar.</p>
+        </article>
+        <button class="btn-i modal-close" data-dnt-dismiss="modal" aria-label="Close">
+            <dnt-icon icon="close"></dnt-icon>
+        </button>
+    </dialog>
+
+    <dialog id="menu-offcanvas" class="modal modal_start" aria-label="Menu">
+        <header>
+            <button class="btn-i" data-dnt-control="#contacts-offcanvas" aria-label="Contacts">
+                <dnt-icon icon="phone"></dnt-icon>
+            </button>
+        </header>
+        <article>
+            <ul class="menu">
+                <li>
+                    <button data-dnt-toggle="modal" data-dnt-target="#menu-modal-about" class="link">О "Carston
+                        Driver"</button>
+                </li>
+                <li>
+                    <button data-dnt-toggle="modal" data-dnt-target="#menu-modal-social" class="link">Соцмедиа "Carston
+                        Driver"</button>
+                </li>
+                <li>
+                    <a href="" class="link" target="_blank">Скачать мануал</a>
+                </li>
+                <li>
+                    <button data-dnt-toggle="modal" data-dnt-target="#menu-modal-vacancy" class="link">Работать с
+                        "Carston
+                        Driver"</button>
+                </li>
+                <li>
+                    <button data-dnt-toggle="modal" data-dnt-target="#menu-modal-partner" class="link">Бизнес с "Carston
+                        Driver"</button>
+                </li>
+            </ul>
+        </article>
+        <button class="btn-i modal-close" data-dnt-dismiss="modal" aria-label="Close">
+            <dnt-icon icon="close"></dnt-icon>
+        </button>
+    </dialog>
+
+    <button data-dnt-control="#bottom-offcanvas" aria-controls="bottom-offcanvas">
+        bottom Offcanvas</button>
+
+    <dialog id="bottom-offcanvas" class="modal modal_bottom" aria-label="bottom" data-dnt-backdrop="false">
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et lectus in magna efficitur
+                iaculis. Vivamus porta ipsum in pretium tempor. Maecenas placerat blandit elit, sed fringilla ante
+                aliquam vel. Donec eget placerat lorem. Duis fringilla vel justo ut finibus. Sed eleifend suscipit
+                tortor vitae porta. Proin nec molestie nisi. Donec in ipsum nec dolor faucibus tincidunt vel at leo.
+                Phasellus vel ligula blandit, fermentum neque non, semper neque. Vestibulum tincidunt vulputate nibh
+                a venenatis. Suspendisse velit nisi, mollis in pellentesque ut, rhoncus vel nisi.</p>
+
+        </article>
+        <button class="btn" data-dnt-dismiss="modal">
+            Ok
+        </button>
+    </dialog>
+
+    <button data-dnt-control="#modal-order" class="btn">Standard dialog</button>
+
+    <button data-dnt-control="#modal-long" class="btn">Long dialog</button>
+    <dialog class="modal modal_body-scrollable" id="modal-long" aria-label="Long dialog" style="width: 400px;">
+        <header>
+            <h2>123</h2>
+        </header>
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et lectus in magna efficitur
+                iaculis. Vivamus porta ipsum in pretium tempor. Maecenas placerat blandit elit, sed fringilla ante
+                aliquam vel. Donec eget placerat lorem. Duis fringilla vel justo ut finibus. Sed eleifend suscipit
+                tortor vitae porta. Proin nec molestie nisi. Donec in ipsum nec dolor faucibus tincidunt vel at leo.
+                Phasellus vel ligula blandit, fermentum neque non, semper neque. Vestibulum tincidunt vulputate nibh
+                a venenatis. Suspendisse velit nisi, mollis in pellentesque ut, rhoncus vel nisi.</p>
+            <p>Duis id lacinia metus. Duis efficitur neque at purus faucibus porta. Duis eu diam tristique, cursus
+                enim faucibus, elementum erat. Quisque ac suscipit quam. Aliquam sed erat eu dolor ornare
+                consectetur a eget leo. Nullam condimentum arcu sed quam rutrum, consequat finibus libero sodales.
+                Nulla ullamcorper feugiat libero, a convallis metus aliquam auctor. Suspendisse et elit commodo,
+                ornare ipsum eget, mattis ipsum. Sed et cursus orci. Pellentesque habitant morbi tristique senectus
+                et netus et malesuada fames ac turpis egestas. Donec faucibus scelerisque rutrum. Donec tincidunt
+                convallis felis, id euismod felis suscipit ut. Aenean non commodo erat. Class aptent taciti sociosqu
+                ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur facilisis dolor ac dolor
+                vehicula, et congue eros malesuada.</p>
+            <p>Morbi ac sodales augue, in laoreet metus. Morbi maximus consectetur diam eget tempor. Donec
+                pellentesque nisi suscipit, scelerisque orci at, imperdiet nisl. Pellentesque sed bibendum est. Sed
+                eget posuere arcu. Nullam et accumsan dolor. Donec auctor commodo molestie. Praesent ante erat,
+                rutrum eget diam vel, fermentum aliquam mi. Vestibulum ac dignissim elit. Interdum et malesuada
+                fames ac ante ipsum primis in faucibus. Mauris congue consectetur quam vel maximus. Quisque et orci
+                ante. Aliquam facilisis porta leo id malesuada.</p>
+            <p>Phasellus sit amet enim ex. Phasellus at enim gravida, mollis orci sed, aliquam leo. Cras et
+                condimentum arcu. In non lobortis turpis. Vivamus consectetur tincidunt orci, eu semper tortor
+                venenatis aliquam. Integer enim risus, suscipit at metus non, bibendum scelerisque nulla. In quis
+                eros eu magna elementum gravida. Donec congue scelerisque lectus et hendrerit. Vestibulum nec neque
+                ac est condimentum bibendum et sed ligula. Praesent sed neque euismod, accumsan ligula ac, auctor
+                ante.</p>
+            <p>Integer pellentesque tellus in faucibus lobortis. Quisque ut volutpat magna. Etiam id eros commodo,
+                vehicula dolor vel, tempus mi. Phasellus eu venenatis nisl. Donec laoreet sagittis ipsum, quis
+                sagittis nunc pellentesque eu. Cras elementum elit ac massa pulvinar aliquam. Donec luctus tincidunt
+                diam, sed ornare tortor consequat sit amet. Nam in imperdiet enim. Vivamus malesuada lobortis
+                aliquam. Etiam ac massa leo. Donec vitae libero nisl.</p>
+            <p>Etiam ornare sem ut tincidunt vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                vel libero at urna porttitor volutpat vitae in purus. Integer nec metus sed sapien luctus pharetra
+                nec sed nulla. Morbi pellentesque tincidunt massa, et laoreet diam ultricies quis. Nam non lacus
+                aliquam, posuere ante ac, auctor ipsum. Aenean ex purus, rutrum vel faucibus tempus, gravida vitae
+                sem. Vestibulum volutpat urna id vestibulum posuere. Vivamus fermentum lacus eget ultricies
+                vestibulum. Curabitur tempus turpis quis lacus vulputate efficitur. Nunc ac porttitor enim. Etiam
+                porta pharetra viverra. Suspendisse nunc odio, tincidunt vitae metus eget, luctus consectetur diam.
+                Proin vel laoreet leo, id dictum enim.</p>
+            <p>Nam suscipit odio quam, in dapibus tortor maximus non. Curabitur ut magna ligula. Sed sagittis risus
+                nunc, non lacinia eros bibendum ac. Nullam purus sapien, condimentum non nibh a, suscipit egestas
+                justo. Ut porttitor in nisl sit amet euismod. Duis interdum ligula ex, et ultrices quam viverra eu.
+                Phasellus ac massa est. Morbi augue neque, volutpat rutrum est vitae, scelerisque fermentum eros.
+                Curabitur sed sem ut tellus pellentesque bibendum nec at magna. In a faucibus eros. Phasellus semper
+                libero non nibh maximus, sed bibendum dolor suscipit. In tristique leo id neque efficitur egestas.
+                Aenean arcu elit, volutpat vitae dolor ac, sagittis fringilla mauris. Ut gravida purus ac
+                ullamcorper accumsan. Aliquam erat volutpat.</p>
+            <p>Quisque et massa eget purus porta pellentesque. Quisque luctus nisi sit amet elit egestas suscipit.
+                Donec augue nulla, pretium accumsan dapibus quis, elementum eu nisi. Integer consectetur consequat
+                ex. Donec orci est, mollis nec diam sed, viverra suscipit purus. Ut suscipit ornare ex placerat
+                lobortis. Aliquam vel volutpat ligula. Praesent sagittis placerat feugiat. Donec ut purus at libero
+                vulputate hendrerit sit amet vel nibh. Nullam finibus massa a tortor aliquet, a consequat libero
+                luctus. Proin rutrum lacus felis, eget tristique augue iaculis eu. Sed vitae elit et diam dignissim
+                bibendum. Phasellus erat orci, cursus quis lacus id, gravida venenatis turpis. Vestibulum ultricies
+                velit ac enim porta, eu eleifend elit tincidunt. Vestibulum quis auctor lorem. Aenean scelerisque
+                odio vel lorem congue pulvinar.</p>
+
+        </article>
+        <button class="btn-i modal-close" data-dnt-dismiss="modal" aria-label="Close">
+            <dnt-icon icon="close"></dnt-icon>
+        </button>
+    </dialog>
+
+    <button data-dnt-control="#modal-fullscreen" class="btn">Fullscreen dialog</button>
+    <dialog class="modal modal_fullscreen" id="modal-fullscreen" aria-label="Order">
+        <article>
+            <p>Duis id lacinia metus. Duis efficitur neque at purus faucibus porta. Duis eu diam tristique, cursus
+                enim faucibus, elementum erat. Quisque ac suscipit quam. Aliquam sed erat eu dolor ornare
+                consectetur a eget leo. Nullam condimentum arcu sed quam rutrum, consequat finibus libero sodales.
+                Nulla ullamcorper feugiat libero, a convallis metus aliquam auctor. Suspendisse et elit commodo,
+                ornare ipsum eget, mattis ipsum. Sed et cursus orci. Pellentesque habitant morbi tristique senectus
+                et netus et malesuada fames ac turpis egestas. Donec faucibus scelerisque rutrum. Donec tincidunt
+                convallis felis, id euismod felis suscipit ut. Aenean non commodo erat. Class aptent taciti sociosqu
+                ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur facilisis dolor ac dolor
+                vehicula, et congue eros malesuada.</p>
+            <p>Duis id lacinia metus. Duis efficitur neque at purus faucibus porta. Duis eu diam tristique, cursus
+                enim faucibus, elementum erat. Quisque ac suscipit quam. Aliquam sed erat eu dolor ornare
+                consectetur a eget leo. Nullam condimentum arcu sed quam rutrum, consequat finibus libero sodales.
+                Nulla ullamcorper feugiat libero, a convallis metus aliquam auctor. Suspendisse et elit commodo,
+                ornare ipsum eget, mattis ipsum. Sed et cursus orci. Pellentesque habitant morbi tristique senectus
+                et netus et malesuada fames ac turpis egestas. Donec faucibus scelerisque rutrum. Donec tincidunt
+                convallis felis, id euismod felis suscipit ut. Aenean non commodo erat. Class aptent taciti sociosqu
+                ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur facilisis dolor ac dolor
+                vehicula, et congue eros malesuada.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et lectus in magna efficitur
+                iaculis. Vivamus porta ipsum in pretium tempor. Maecenas placerat blandit elit, sed fringilla ante
+                aliquam vel. Donec eget placerat lorem. Duis fringilla vel justo ut finibus. Sed eleifend suscipit
+                tortor vitae porta. Proin nec molestie nisi. Donec in ipsum nec dolor faucibus tincidunt vel at leo.
+                Phasellus vel ligula blandit, fermentum neque non, semper neque. Vestibulum tincidunt vulputate nibh
+                a venenatis. Suspendisse velit nisi, mollis in pellentesque ut, rhoncus vel nisi.</p>
+            <p>Duis id lacinia metus. Duis efficitur neque at purus faucibus porta. Duis eu diam tristique, cursus
+                enim faucibus, elementum erat. Quisque ac suscipit quam. Aliquam sed erat eu dolor ornare
+                consectetur a eget leo. Nullam condimentum arcu sed quam rutrum, consequat finibus libero sodales.
+                Nulla ullamcorper feugiat libero, a convallis metus aliquam auctor. Suspendisse et elit commodo,
+                ornare ipsum eget, mattis ipsum. Sed et cursus orci. Pellentesque habitant morbi tristique senectus
+                et netus et malesuada fames ac turpis egestas. Donec faucibus scelerisque rutrum. Donec tincidunt
+                convallis felis, id euismod felis suscipit ut. Aenean non commodo erat. Class aptent taciti sociosqu
+                ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur facilisis dolor ac dolor
+                vehicula, et congue eros malesuada.</p>
+            <p>Morbi ac sodales augue, in laoreet metus. Morbi maximus consectetur diam eget tempor. Donec
+                pellentesque nisi suscipit, scelerisque orci at, imperdiet nisl. Pellentesque sed bibendum est. Sed
+                eget posuere arcu. Nullam et accumsan dolor. Donec auctor commodo molestie. Praesent ante erat,
+                rutrum eget diam vel, fermentum aliquam mi. Vestibulum ac dignissim elit. Interdum et malesuada
+                fames ac ante ipsum primis in faucibus. Mauris congue consectetur quam vel maximus. Quisque et orci
+                ante. Aliquam facilisis porta leo id malesuada.</p>
+            <p>Phasellus sit amet enim ex. Phasellus at enim gravida, mollis orci sed, aliquam leo. Cras et
+                condimentum arcu. In non lobortis turpis. Vivamus consectetur tincidunt orci, eu semper tortor
+                venenatis aliquam. Integer enim risus, suscipit at metus non, bibendum scelerisque nulla. In quis
+                eros eu magna elementum gravida. Donec congue scelerisque lectus et hendrerit. Vestibulum nec neque
+                ac est condimentum bibendum et sed ligula. Praesent sed neque euismod, accumsan ligula ac, auctor
+                ante.</p>
+            <p>Integer pellentesque tellus in faucibus lobortis. Quisque ut volutpat magna. Etiam id eros commodo,
+                vehicula dolor vel, tempus mi. Phasellus eu venenatis nisl. Donec laoreet sagittis ipsum, quis
+                sagittis nunc pellentesque eu. Cras elementum elit ac massa pulvinar aliquam. Donec luctus tincidunt
+                diam, sed ornare tortor consequat sit amet. Nam in imperdiet enim. Vivamus malesuada lobortis
+                aliquam. Etiam ac massa leo. Donec vitae libero nisl.</p>
+            <p>Etiam ornare sem ut tincidunt vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                vel libero at urna porttitor volutpat vitae in purus. Integer nec metus sed sapien luctus pharetra
+                nec sed nulla. Morbi pellentesque tincidunt massa, et laoreet diam ultricies quis. Nam non lacus
+                aliquam, posuere ante ac, auctor ipsum. Aenean ex purus, rutrum vel faucibus tempus, gravida vitae
+                sem. Vestibulum volutpat urna id vestibulum posuere. Vivamus fermentum lacus eget ultricies
+                vestibulum. Curabitur tempus turpis quis lacus vulputate efficitur. Nunc ac porttitor enim. Etiam
+                porta pharetra viverra. Suspendisse nunc odio, tincidunt vitae metus eget, luctus consectetur diam.
+                Proin vel laoreet leo, id dictum enim.</p>
+            <p>Nam suscipit odio quam, in dapibus tortor maximus non. Curabitur ut magna ligula. Sed sagittis risus
+                nunc, non lacinia eros bibendum ac. Nullam purus sapien, condimentum non nibh a, suscipit egestas
+                justo. Ut porttitor in nisl sit amet euismod. Duis interdum ligula ex, et ultrices quam viverra eu.
+                Phasellus ac massa est. Morbi augue neque, volutpat rutrum est vitae, scelerisque fermentum eros.
+                Curabitur sed sem ut tellus pellentesque bibendum nec at magna. In a faucibus eros. Phasellus semper
+                libero non nibh maximus, sed bibendum dolor suscipit. In tristique leo id neque efficitur egestas.
+                Aenean arcu elit, volutpat vitae dolor ac, sagittis fringilla mauris. Ut gravida purus ac
+                ullamcorper accumsan. Aliquam erat volutpat.</p>
+            <p>Quisque et massa eget purus porta pellentesque. Quisque luctus nisi sit amet elit egestas suscipit.
+                Donec augue nulla, pretium accumsan dapibus quis, elementum eu nisi. Integer consectetur consequat
+                ex. Donec orci est, mollis nec diam sed, viverra suscipit purus. Ut suscipit ornare ex placerat
+                lobortis. Aliquam vel volutpat ligula. Praesent sagittis placerat feugiat. Donec ut purus at libero
+                vulputate hendrerit sit amet vel nibh. Nullam finibus massa a tortor aliquet, a consequat libero
+                luctus. Proin rutrum lacus felis, eget tristique augue iaculis eu. Sed vitae elit et diam dignissim
+                bibendum. Phasellus erat orci, cursus quis lacus id, gravida venenatis turpis. Vestibulum ultricies
+                velit ac enim porta, eu eleifend elit tincidunt. Vestibulum quis auctor lorem. Aenean scelerisque
+                odio vel lorem congue pulvinar.</p>
+            <h2 class="modal-title">Заказать поездку</h2>
+
+            <form data-form-process="order" novalidate class="form-order">
+                <input type="hidden" name="title" value="Заказать поездку">
+                <div class="form-group" data-app-form-suggest></div>
+
+                <div class="form-group">
+                    <div class="form-control form-control_floating form-control_clearable">
+                        <input type="tel" name="phone" required id="modal-order-phone" autocomplete="tel" tabindex="0">
+                        <label>Укажите Ваш телефон</label>
+                    </div>
+                </div>
+
+                <label class="form-check__label form-accept">
+                    <span class="form-check">
+                        <input type="checkbox" name="accept" required>
+                        <dnt-icon icon="check"></dnt-icon>
+                        <span class="invalid-tooltip">Необходимо согласиться с политикой</span>
+                    </span>
+                    <span>Нажимая кнопку «Отправить» я даю свое <a href="" target="_blank">согласие</a> на
+                        обработку <a href="" target="_blank">персональных
+                            данных</a></span>
+                </label>
+                <button class="btn btn-contrast">Получить рассчет</button>
+            </form>
+        </article>
+
+        <button class="btn-i modal-close" data-dnt-dismiss="modal" aria-label="Закрыть">
+            <dnt-icon icon="close"></dnt-icon>
+        </button>
+    </dialog>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et lectus in magna efficitur
+        iaculis. Vivamus porta ipsum in pretium tempor. Maecenas placerat blandit elit, sed fringilla ante
+        aliquam vel. Donec eget placerat lorem. Duis fringilla vel justo ut finibus. Sed eleifend suscipit
+        tortor vitae porta. Proin nec molestie nisi. Donec in ipsum nec dolor faucibus tincidunt vel at leo.
+        Phasellus vel ligula blandit, fermentum neque non, semper neque. Vestibulum tincidunt vulputate nibh
+        a venenatis. Suspendisse velit nisi, mollis in pellentesque ut, rhoncus vel nisi.</p>
+    <p>Duis id lacinia metus. Duis efficitur neque at purus faucibus porta. Duis eu diam tristique, cursus
+        enim faucibus, elementum erat. Quisque ac suscipit quam. Aliquam sed erat eu dolor ornare
+        consectetur a eget leo. Nullam condimentum arcu sed quam rutrum, consequat finibus libero sodales.
+        Nulla ullamcorper feugiat libero, a convallis metus aliquam auctor. Suspendisse et elit commodo,
+        ornare ipsum eget, mattis ipsum. Sed et cursus orci. Pellentesque habitant morbi tristique senectus
+        et netus et malesuada fames ac turpis egestas. Donec faucibus scelerisque rutrum. Donec tincidunt
+        convallis felis, id euismod felis suscipit ut. Aenean non commodo erat. Class aptent taciti sociosqu
+        ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur facilisis dolor ac dolor
+        vehicula, et congue eros malesuada.</p>
+    <p>Duis id lacinia metus. Duis efficitur neque at purus faucibus porta. Duis eu diam tristique, cursus
+        enim faucibus, elementum erat. Quisque ac suscipit quam. Aliquam sed erat eu dolor ornare
+        consectetur a eget leo. Nullam condimentum arcu sed quam rutrum, consequat finibus libero sodales.
+        Nulla ullamcorper feugiat libero, a convallis metus aliquam auctor. Suspendisse et elit commodo,
+        ornare ipsum eget, mattis ipsum. Sed et cursus orci. Pellentesque habitant morbi tristique senectus
+        et netus et malesuada fames ac turpis egestas. Donec faucibus scelerisque rutrum. Donec tincidunt
+        convallis felis, id euismod felis suscipit ut. Aenean non commodo erat. Class aptent taciti sociosqu
+        ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur facilisis dolor ac dolor
+        vehicula, et congue eros malesuada.</p>
+    <p>Morbi ac sodales augue, in laoreet metus. Morbi maximus consectetur diam eget tempor. Donec
+        pellentesque nisi suscipit, scelerisque orci at, imperdiet nisl. Pellentesque sed bibendum est. Sed
+        eget posuere arcu. Nullam et accumsan dolor. Donec auctor commodo molestie. Praesent ante erat,
+        rutrum eget diam vel, fermentum aliquam mi. Vestibulum ac dignissim elit. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Mauris congue consectetur quam vel maximus. Quisque et orci
+        ante. Aliquam facilisis porta leo id malesuada.</p>
+    <p>Phasellus sit amet enim ex. Phasellus at enim gravida, mollis orci sed, aliquam leo. Cras et
+        condimentum arcu. In non lobortis turpis. Vivamus consectetur tincidunt orci, eu semper tortor
+        venenatis aliquam. Integer enim risus, suscipit at metus non, bibendum scelerisque nulla. In quis
+        eros eu magna elementum gravida. Donec congue scelerisque lectus et hendrerit. Vestibulum nec neque
+        ac est condimentum bibendum et sed ligula. Praesent sed neque euismod, accumsan ligula ac, auctor
+        ante.</p>
+    <p>Integer pellentesque tellus in faucibus lobortis. Quisque ut volutpat magna. Etiam id eros commodo,
+        vehicula dolor vel, tempus mi. Phasellus eu venenatis nisl. Donec laoreet sagittis ipsum, quis
+        sagittis nunc pellentesque eu. Cras elementum elit ac massa pulvinar aliquam. Donec luctus tincidunt
+        diam, sed ornare tortor consequat sit amet. Nam in imperdiet enim. Vivamus malesuada lobortis
+        aliquam. Etiam ac massa leo. Donec vitae libero nisl.</p>
+    <p>Etiam ornare sem ut tincidunt vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+        vel libero at urna porttitor volutpat vitae in purus. Integer nec metus sed sapien luctus pharetra
+        nec sed nulla. Morbi pellentesque tincidunt massa, et laoreet diam ultricies quis. Nam non lacus
+        aliquam, posuere ante ac, auctor ipsum. Aenean ex purus, rutrum vel faucibus tempus, gravida vitae
+        sem. Vestibulum volutpat urna id vestibulum posuere. Vivamus fermentum lacus eget ultricies
+        vestibulum. Curabitur tempus turpis quis lacus vulputate efficitur. Nunc ac porttitor enim. Etiam
+        porta pharetra viverra. Suspendisse nunc odio, tincidunt vitae metus eget, luctus consectetur diam.
+        Proin vel laoreet leo, id dictum enim.</p>
+    <p>Nam suscipit odio quam, in dapibus tortor maximus non. Curabitur ut magna ligula. Sed sagittis risus
+        nunc, non lacinia eros bibendum ac. Nullam purus sapien, condimentum non nibh a, suscipit egestas
+        justo. Ut porttitor in nisl sit amet euismod. Duis interdum ligula ex, et ultrices quam viverra eu.
+        Phasellus ac massa est. Morbi augue neque, volutpat rutrum est vitae, scelerisque fermentum eros.
+        Curabitur sed sem ut tellus pellentesque bibendum nec at magna. In a faucibus eros. Phasellus semper
+        libero non nibh maximus, sed bibendum dolor suscipit. In tristique leo id neque efficitur egestas.
+        Aenean arcu elit, volutpat vitae dolor ac, sagittis fringilla mauris. Ut gravida purus ac
+        ullamcorper accumsan. Aliquam erat volutpat.</p>
+    <p>Quisque et massa eget purus porta pellentesque. Quisque luctus nisi sit amet elit egestas suscipit.
+        Donec augue nulla, pretium accumsan dapibus quis, elementum eu nisi. Integer consectetur consequat
+        ex. Donec orci est, mollis nec diam sed, viverra suscipit purus. Ut suscipit ornare ex placerat
+        lobortis. Aliquam vel volutpat ligula. Praesent sagittis placerat feugiat. Donec ut purus at libero
+        vulputate hendrerit sit amet vel nibh. Nullam finibus massa a tortor aliquet, a consequat libero
+        luctus. Proin rutrum lacus felis, eget tristique augue iaculis eu. Sed vitae elit et diam dignissim
+        bibendum. Phasellus erat orci, cursus quis lacus id, gravida venenatis turpis. Vestibulum ultricies
+        velit ac enim porta, eu eleifend elit tincidunt. Vestibulum quis auctor lorem. Aenean scelerisque
+        odio vel lorem congue pulvinar.</p>
+
+    <dialog class="modal" id="modal-order" aria-label="Order">
+        <form data-form-process="order" novalidate class="form-order">
+            <header>
+                <h2 class="modal-title">Order</h2>
+            </header>
+
+            <article>
+                <div class="form-group" data-app-form-suggest></div>
+
+                <div class="form-group">
+                    <label>Phone number</label>
+                    <input type="tel" name="phone" required id="modal-order-phone" autocomplete="tel">
+                </div>
+
+                <label class="form-check__label form-accept">
+                    <span class="form-check">
+                        <input type="checkbox" name="accept" required>
+                        <dnt-icon icon="check"></dnt-icon>
+                        <span class="invalid-tooltip">You must consent to data processing</span>
+                    </span>
+                    <span>I agree to <a href="" target="_blank">the processing of my personal data</a></span>
+                </label>
+            </article>
+            <footer>
+                <button class="btn">Send</button>
+            </footer>
+        </form>
+        <button class="btn-i modal-close" data-dnt-dismiss="modal" aria-label="Close">
+            <dnt-icon icon="close"></dnt-icon>
+        </button>
+    </dialog>
+
+    <script>
+        const mod = document.querySelector('#modal-order');
+        mod.addEventListener('modal.dnt.show', console.log)
+        mod.addEventListener('modal.dnt.shown', console.log)
+        mod.addEventListener('modal.dnt.close', console.log)
+        mod.addEventListener('modal.dnt.closed', console.log)
+    </script>
+</body>
+
+</html>

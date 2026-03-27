@@ -1,0 +1,36 @@
+.form-listbox {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: var(--bg);
+  color: var(--color);
+  z-index: 10;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid currentColor;
+  left: 0;
+  top: 100%;
+  flex-direction: column;
+}
+
+.form-listbox-item {
+  padding: 0.2rem var(--input-padding-x, 0.75rem);
+}
+
+.form-listbox-item:hover,
+.form-listbox-item[aria-selected] {
+  background-color: var(--accent);
+}
+
+.form-listbox_open {
+  display: flex;
+}
+
+.form-control_upper-listbox .form-listbox {
+  bottom: 100%;
+  top: unset;
+  flex-direction: column-reverse;
+}

@@ -1,0 +1,49 @@
+/* // Form validation
+//
+// Provide feedback to users when form field values are valid or invalid. Works
+// primarily for client-side validation via scoped `:invalid` and `:valid`
+// pseudo-classes but also includes `.is-invalid` and `.is-valid` classes for
+// server-side validation. */
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.5rem;
+  color: red;
+}
+
+.invalid-tooltip {
+  position: absolute;
+  bottom: 100%;
+  z-index: 5;
+  display: none;
+  max-width: 100%;
+  /* // Contain to parent when possible */
+  padding: 0.5em;
+  margin-bottom: 0.1rem;
+  font-size: 0.9em;
+  color: red;
+  background-color: #fff;
+  border-radius: 0.5em;
+  border: 1px solid red;
+}
+
+.form-check .invalid-tooltip {
+  max-width: 300px;
+  width: max-content;
+  /* // width: 300px; */
+}
+
+form > .invalid-tooltip {
+  position: relative;
+  bottom: unset;
+  margin-bottom: 1rem;
+}
+
+.was-validated :where(:invalid, .is-invalid) {
+  outline: 1px solid red;
+}
+
+.was-validated :where(:invalid, .is-invalid) :where(.invalid-feedback, .invalid-tooltip) {
+  display: block;
+}

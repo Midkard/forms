@@ -1,0 +1,19 @@
+# packages
+node_modules/
+vendor/
+
+# building
+.build/
+.release/
+dist/
+lib/
+package-lock.json
+
+# private
+.vscode/
+
+# dev
+.phpunit.result.cache
+.env
+__pycache__
+log/

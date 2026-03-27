@@ -1,0 +1,190 @@
+.form-control {
+  position: relative;
+}
+
+.form-control input {
+  display: block;
+  width: 100%;
+  padding: var(--input-padding-y, 0.375rem) var(--input-padding-x, 0.75rem);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.5;
+  color: var(--color);
+  /* // Fix appearance for date inputs in Safari */
+  appearance: none;
+  background-color: var(--bg);
+  background-clip: padding-box;
+  border: 1px solid currentColor;
+
+  /* // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS. */
+  border-radius: 0;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.form-control input[type='file'] {
+  overflow: hidden;
+}
+
+.form-control input[type='file']:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+
+/* // Customize the `:focus` state to imitate native WebKit styles.
+.form-control input:focus {
+  // color: $input-focus-color;
+  // background-color: $input-focus-bg;
+  // border-color: $input-focus-border-color;
+  // outline: 0;
+} */
+
+.form-control input::-webkit-date-and-time-value {
+  /* // On Android Chrome, form-control's "width: 100%" makes the input width too small
+  // Tested under Android 11 / Chrome 89, Android 12 / Chrome 100, Android 13 / Chrome 109
+  //
+  // On iOS Safari, form-control's "appearance: none" + "width: 100%" makes the input width too small
+  // Tested under iOS 16.2 / Safari 16.2 */
+  min-width: 85px;
+
+  /* // Add some height to date inputs on iOS
+  // https://github.com/twbs/bootstrap/issues/23307
+  // TODO: we can remove this workaround once https://bugs.webkit.org/show_bug.cgi?id=198959 is resolved
+  // Multiply line-height by 1em if it has no unit */
+  height: 1.5em;
+
+  /* // Android Chrome type="date" is taller than the other inputs
+  // because of "margin: 1px 24px 1px 4px" inside the shadow DOM
+  // Tested under Android 11 / Chrome 89, Android 12 / Chrome 100, Android 13 / Chrome 109 */
+  margin: 0;
+}
+
+/* // Prevent excessive date input height in Webkit
+// https://github.com/twbs/bootstrap/issues/34433 */
+.form-control input::-webkit-datetime-edit {
+  display: block;
+  padding: 0;
+}
+
+/* // Placeholder */
+.form-control input::placeholder {
+  color: inherit;
+  /* // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
+  opacity: 0.5;
+}
+
+/* // Disabled inputs
+//
+// HTML5 says that controls under a fieldset > legend:first-child won't be
+// disabled if the fieldset is disabled. Due to implementation difficulty, we
+// don't honor that edge case; we style them as disabled anyway. */
+.form-control input:disabled {
+  /* // color: $input-disabled-color;
+  // background-color: $input-disabled-bg;
+  // border-color: $input-disabled-border-color;
+  // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655. */
+  opacity: 1;
+}
+
+/* // File input buttons theming
+  .form-control input::file-selector-button {
+    // padding: $input-padding-y $input-padding-x;
+    // margin: (-$input-padding-y) (-$input-padding-x);
+    // margin-inline-end: $input-padding-x;
+    // color: $form-file-button-color;
+    // @include gradient-bg($form-file-button-bg);
+    // pointer-events: none;
+    // border-color: inherit;
+    // border-style: solid;
+    // border-width: 0;
+    // border-inline-end-width: $input-border-width;
+    // border-radius: 0; // stylelint-disable-line property-disallowed-list
+    // @include transition($btn-transition);
+  } */
+
+.form-control input:hover:not(:disabled):not([readonly])::file-selector-button {
+  /* // background-color: $form-file-button-hover-bg; */
+}
+
+.form-control textarea {
+  width: 100%;
+  padding: var(--input-padding-x, 0.375rem) var(--input-padding-y, 0.75rem);
+  min-height: 1.5em;
+}
+
+.form-control textarea::placeholder {
+  color: inherit;
+  /* // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
+  opacity: 0.5;
+}
+
+.form-control_clearable input {
+  padding-right: 30px;
+}
+
+.form-control__clear {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  padding: 10px;
+  transform: translate(0, -50%);
+}
+
+.form-control_empty .form-control__clear {
+  display: none;
+}
+
+.form-control_floating label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  max-width: calc(100% - 2 * var(--input-padding-x, 0.75rem));
+  margin-left: var(--input-padding-x, 0.75rem);
+  overflow: hidden;
+  color: currentColor;
+  text-align: start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+  /* // Required for aligning label's text with the input as it affects inner box model */
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition:
+    transform 0.15s,
+    top 0.15s;
+  transform: translate(0, -50%);
+}
+
+.form-control_floating input {
+  padding-block: var(--input-padding-y, 1.25rem);
+}
+
+.form-control_floating input::placeholder {
+  color: transparent;
+}
+
+.form-control_floating input:where(:focus, :hover),
+.form-control_floating input:not(:placeholder-shown, .form-control_empty *) {
+  padding-top: calc(1.5 * var(--input-padding-y, 1.25rem));
+  padding-bottom: calc(0.5 * var(--input-padding-y, 1.25rem));
+}
+
+/* // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped */
+.form-control_floating input:-webkit-autofill {
+  padding-top: calc(1.5 * var(--input-padding-y, 1.25rem));
+  padding-bottom: calc(0.5 * var(--input-padding-y, 1.25rem));
+}
+
+.form-control_floating input:where(:focus, :hover) ~ label,
+.form-control_floating input:not(:placeholder-shown, .form-control_empty *) ~ label {
+  top: 0.2rem;
+  transform: translate(0, 0);
+}
+
+/* // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped */
+.form-control_floating input:-webkit-autofill ~ label {
+  top: 0.2rem;
+  transform: translate(0, 0);
+}
