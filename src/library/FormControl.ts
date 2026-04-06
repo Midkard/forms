@@ -20,11 +20,29 @@ export class FormControl implements DntForms.FormControl {
       this.toggleEmptyClass()
       input.addEventListener('input', this.toggleEmptyClass)
       input.addEventListener('change', this.toggleEmptyClass)
+      this.observeValueChanges()
     }
 
     if (this.container.classList.contains('form-control_clearable')) {
       this.createClearButton()
     }
+  }
+
+  observeValueChanges = () => {
+    const input = this.inputNode
+    const descriptor = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')
+    const originalSetter = descriptor?.set
+
+    if (!originalSetter) return
+
+    Object.defineProperty(input, 'value', {
+      get: () => descriptor.get?.call(input),
+      set: (newValue: string) => {
+        originalSetter.call(input, newValue)
+        this.toggleEmptyClass()
+      },
+      configurable: true,
+    })
   }
 
   createClearButton = () => {
