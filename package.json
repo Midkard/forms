@@ -1,5 +1,5 @@
 {
-  "name": "@dnt-theme/forms",
+  "name": "@midkard/forms",
   "version": "0.0.0",
   "type": "module",
   "author": "Dimenius Novus <dimenius@dn-ms.ru> (https://dn-ms.ru)",
@@ -7,13 +7,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.dn-ms.ru/dnt-theme/forms.git"
+    "url": "https://github.com/midkard/forms.git"
   },
-  "bugs": "https://gitlab.dn-ms.ru/dnt-theme/forms/-/issues",
+  "bugs": "https://github.com/midkard/forms/issues",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
     "dnt-theme",
-    "swiper",
-    "fancybox",
     "forms"
   ],
   "scripts": {
@@ -30,7 +31,7 @@
   "types": "./types/forms.d.ts",
   "devDependencies": {
     "@eslint/js": "^9.27.0",
-    "@semantic-release/gitlab": "^13.2.9",
+    "@semantic-release/github": "^12.0.6",
     "@semantic-release/npm": "^13.1.1",
     "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.5",

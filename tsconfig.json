@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@dnt-theme/forms": [
-        "src/namespace.ts"
+        "./src/namespace.ts"
       ],
     },
     "target": "ES2020",
