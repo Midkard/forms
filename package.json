@@ -11,7 +11,8 @@
   },
   "bugs": "https://github.com/midkard/forms/issues",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "keywords": [
     "dnt-theme",
